@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <h1 align="center">CALCULATOR</h1>
+    <center>
+    <div class="container">
+        <div class="display">
+            <h2 id="result">0</h2>
+        </div>
+        <div class="button">
+            <button onclick="press('7')">7</button>
+            <button onclick="press('8')">8</button>
+            <button onclick="press('9')">9</button>
+
+            <button onclick="press('7')">4</button>
+            <button onclick="press('7')">5</button>
+            <button onclick="press('7')">6</button>
+
+            <button onclick="press('7')">1</button>
+            <button onclick="press('7')">2</button>
+            <button onclick="press('7')">3</button>
+            <button onclick="press('-')">−</button>
+
+        <button onclick="press('0')">0</button>
+        <button onclick="press('.')">.</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="press('+')">+</button>
+
+    <button onclick="errase()" class="clear">C</button> 
+        </div>
+    </div>
+    </center>
+    <script>
+        let String="";
+        function press(val){
+            result+=val;
+        }
+
+        function calculate(){
+            try{
+            result=eval(result);
+            document.getElementById("result").innerText(result)}
+            catch{
+            document.getElementById("result").innerText="ERROR"
+            }
+        }
+        function clear(){
+            result=""
+            docuent.getElementById("result").innerHTML=0
+        }
+    </script>
+</body>
+</html>
